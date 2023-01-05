@@ -1,41 +1,27 @@
 import { useState } from 'react'
-import styled from 'styled-components'
+import { TopBanner } from '../../atom/drawer/TopBanner'
 import {
-  DrawerBlur,
-  DrawerContainer,
-  TopBannerContainer,
-} from '../../atom/drawer/Drawer'
+  LayoutBlur,
+  LayoutContainer,
+  PageContentContainer,
+} from '../../atom/layout/Layout'
+import { useMedia } from '../../hooks/UseMedia'
+import { DrawerMenu } from '../drawer/DrawerMenu'
 
-type LayoutProps = {}
-
-const LayoutContainer = styled.div`
-  display: flex;
-  z-index: 0;
-  justify-content: center;
-  flex-direction: column;
-  place-items: center;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-`
-
-const AppWrapper = styled.div`
-  z-index: 0;
-  overflow: hidden;
-`
+type LayoutProps = {
+  open: boolean
+}
 
 const Layout = ({ children }: any) => {
   const [open, setOpen] = useState<boolean>(false)
+  const viewport = useMedia()
 
   return (
     <LayoutContainer>
-      <DrawerContainer open={open} setOpen={setOpen}>
-        <button onClick={() => setOpen(!open)}>cerrar</button>
-      </DrawerContainer>
-      <TopBannerContainer>
-        <button onClick={() => setOpen(!open)}>abrir</button>
-      </TopBannerContainer>
-      {children}
+      {open && <LayoutBlur />}
+      <DrawerMenu open={open} setOpen={setOpen} viewport={viewport} />
+      <TopBanner open={open} setOpen={setOpen} />
+      <PageContentContainer>{children}</PageContentContainer>
     </LayoutContainer>
   )
 }

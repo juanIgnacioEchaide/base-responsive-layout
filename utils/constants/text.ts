@@ -1,5 +1,14 @@
 enum PageTitle {
-    Index = "Index"
+    Index = "Index",
+    Photo = "Fotografía",
+    Articles = "Articles",
+    Motivational = "Motivational",
 }
 
-export { PageTitle }
+enum Viewport {
+    Default = "",
+    Desktop = "Desktop",
+    Mobile = "Mobile"
+}
+
+export { PageTitle, Viewport }
