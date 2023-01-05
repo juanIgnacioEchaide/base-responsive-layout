@@ -1,5 +1,7 @@
+import { PhotosTemplate } from '../template/PhotosTemplate'
+
 const Photo = () => {
-  return <p>photo</p>
+  return <PhotosTemplate />
 }
 
 export default Photo

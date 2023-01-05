@@ -55,6 +55,7 @@ const DrawerLinksContainer = styled.p`
 const BurgerContainer = styled.div`
   padding-top: 20px;
   padding-left: 15px;
+  user-select: none;
 `
 
 const CloseArrowContainer = styled.div`

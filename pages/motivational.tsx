@@ -1,4 +1,6 @@
-const Photo = () => {
-  return <p>meme</p>
+import { MotivationalTemplate } from "../template/MotivationalTemplate"
+
+const Motivational = () => {
+  return <MotivationalTemplate />
 }
-export default Photo
+export default Motivational

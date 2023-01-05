@@ -1,5 +1,7 @@
+import { SuscribeTemplate } from '../template/SuscribeTemplate'
+
 const Suscribe = () => {
-  return <p>suscri</p>
+  return <SuscribeTemplate />
 }
 
 export default Suscribe

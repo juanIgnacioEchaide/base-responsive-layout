@@ -1,16 +1,5 @@
-import { ArticleBox, FullScrollBox } from "../atom/box/Box";
+import { ArticlesTemplate } from '../template/ArticlesTemplate'
 
-export default function Articles() {
-  return (
-    <FullScrollBox>
-      <ArticleBox>photo</ArticleBox>
-      <ArticleBox>photo</ArticleBox>
-      <ArticleBox>photo</ArticleBox>
-      <ArticleBox>photo</ArticleBox>
-      <ArticleBox>photo</ArticleBox>
-      <ArticleBox>photo</ArticleBox>
-      <ArticleBox>photo</ArticleBox>
-      <ArticleBox>photo</ArticleBox>
-    </FullScrollBox>
-  )
+export default function Articles(): JSX.Element {
+  return <ArticlesTemplate />
 }

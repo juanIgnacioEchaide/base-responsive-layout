@@ -11,7 +11,7 @@ const BasePageTemplate = ({ title, meta, link, content }: any) => {
         <Meta meta={meta} />
         <LinkRels link={link} />
       </Head>
-{/*       <ContentContainer content={content} /> */}
+      {content}
     </>
   )
 }
