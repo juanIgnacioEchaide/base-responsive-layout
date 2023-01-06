@@ -5,6 +5,7 @@ const FullScrollBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 24vh;
   height: 100vh;
   width: 100vw;
   top: 0;
